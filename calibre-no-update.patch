@@ -1,7 +1,7 @@
-diff -Nur calibre-2.9.0.orig/src/calibre/gui2/update.py calibre-2.9.0/src/calibre/gui2/update.py
---- calibre-2.9.0.orig/src/calibre/gui2/update.py	2014-11-08 21:43:22.888681538 -0700
-+++ calibre-2.9.0/src/calibre/gui2/update.py	2014-11-08 21:45:27.363383815 -0700
-@@ -63,20 +63,6 @@
+diff --color -Nur calibre-6.17.0.orig/src/calibre/gui2/update.py calibre-6.17.0/src/calibre/gui2/update.py
+--- calibre-6.17.0.orig/src/calibre/gui2/update.py	2023-05-06 11:36:35.678461036 -0700
++++ calibre-6.17.0/src/calibre/gui2/update.py	2023-05-06 11:39:10.365134930 -0700
+@@ -82,20 +82,6 @@
          while not self.shutdown_event.is_set():
              calibre_update_version = NO_CALIBRE_UPDATE
              plugins_update_found = 0
