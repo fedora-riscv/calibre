@@ -298,6 +298,7 @@ TEST_ARGS=(
     --exclude-test-name 7z                 # missing dependencies
     --exclude-test-name test_searching     # python3 porting issue?
     --exclude-test-name test_zstd          # pyzstd not packaged yet
+    --exclude-test-name test_zeroconf      # AttributeError: 'functools._lru_cache_wrapper' object has no attribute '__kwdefaults__'
 )
 
 CALIBRE_PY3_PORT=1 \
