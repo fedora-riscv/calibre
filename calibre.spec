@@ -17,7 +17,6 @@ Patch1:         calibre-no-update.patch
 # Do not display multiple apps in desktop files, only the main app
 # This is so gnome-software only 'sees' calibre once.
 Patch3:         calibre-nodisplay.patch
-Patch4:         calibre-revert-new-podofo.patch
 
 ExclusiveArch: aarch64 x86_64
 
