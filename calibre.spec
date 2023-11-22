@@ -181,7 +181,7 @@ rm -rvf resources/mathjax
 
 %build
 # unbundle MathJax
-%{__python3} setup.py mathjax \
+%python3 setup.py mathjax \
     --system-mathjax \
     --path-to-mathjax %{_jsdir}/mathjax@3/
 
@@ -199,19 +199,20 @@ mkdir -p %{buildroot}%{_datadir}/zsh/site-functions
 
 LIBPATH="%{_libdir}" \
 CALIBRE_PY3_PORT=1 \
-%__python3 setup.py install --root=%{buildroot}%{_prefix} \
-                            --prefix=%{_prefix} \
-                            --libdir=%{_libdir} \
-                            --staging-root=%{buildroot}%{_prefix} \
-                            --staging-libdir=%{buildroot}%{_libdir} \
-                            --staging-sharedir=%{buildroot}%{_datadir}
+%python3 setup.py install \
+    --root=%{buildroot}%{_prefix} \
+    --prefix=%{_prefix} \
+    --libdir=%{_libdir} \
+    --staging-root=%{buildroot}%{_prefix} \
+    --staging-libdir=%{buildroot}%{_libdir} \
+    --staging-sharedir=%{buildroot}%{_datadir}
 
 # remove shebang from init_calibre.py here because
 # it just got spawned by the install script
 sed -i -e '/^#!\//, 1d' %{buildroot}%{python3_sitearch}/init_calibre.py
 
 # there are some python files there, do byte-compilation on them
-%py_byte_compile %{__python3} %{buildroot}%{_datadir}/calibre
+%py_byte_compile %python3 %{buildroot}%{_datadir}/calibre
 
 # icons
 mkdir -p %{buildroot}%{_datadir}/pixmaps/
