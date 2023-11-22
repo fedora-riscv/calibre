@@ -6,7 +6,8 @@ Name:           calibre
 Version:        6.28.1
 Release:        %autorelease
 Summary:        E-book converter and library manager
-License:        GPLv3
+# see COPYRIGHT file for a listing
+License:        GPL-3.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-only AND LicenseRef-Fedora-Public-Domain AND BSD-3-clause AND Apache-2.0 AND PSF-2.0 AND ImageMagick
 URL:            https://calibre-ebook.com/
 
 Source0:        https://download.calibre-ebook.com/%{version}/%{name}-%{version}.tar.xz
