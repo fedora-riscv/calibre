@@ -4,7 +4,7 @@
 
 Name:           calibre
 Version:        7.3.0
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        E-book converter and library manager
 # see COPYRIGHT file for a listing
 License:        GPL-3.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-only AND LicenseRef-Fedora-Public-Domain AND BSD-3-clause AND Apache-2.0 AND PSF-2.0 AND ImageMagick
@@ -19,7 +19,7 @@ Patch1:         calibre-no-update.patch
 # This is so gnome-software only 'sees' calibre once.
 Patch3:         calibre-nodisplay.patch
 
-ExclusiveArch: aarch64 x86_64
+ExclusiveArch: aarch64 x86_64 riscv64
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
